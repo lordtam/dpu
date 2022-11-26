@@ -82,4 +82,10 @@ public class ProductRepository : IProductRepository
             return null;
         }
     }
+
+    public Product CreateProduct(Product product)
+    {
+        _databaseContext.Products.Add(product);
+        return product;
+    }
 }
