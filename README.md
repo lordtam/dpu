@@ -8,6 +8,14 @@ username: sa<br />
 
 password: Aa123456<br />
 
+<br/>
+======================================================================================
+<br/>
+
+dotnet new webapi<br/>
+
+dotnet watch run<br/>
+
 ติดตั้ง dotnet tool ผ่าน Terminal ใน VS Code<br/>
 dotnet tool install --global dotnet-ef <br/>
 
