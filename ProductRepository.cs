@@ -53,4 +53,33 @@ public class ProductRepository : IProductRepository
     {
         return _databaseContext.Products;
     }
+
+    public Product? GetProductByIdVersion2(int id)
+    {
+        string queryString = "SELECT * FROM [dbo].[Product] WHERE id = @id";
+        string connectionString = "Server=db.ciofuwpvxhep.ap-southeast-1.rds.amazonaws.com,1433;Initial Catalog=surasak;User ID=sa;Password=Aa123456";
+
+        using (SqlConnection conn = new SqlConnection(connectionString))
+        {
+            SqlCommand command = new SqlCommand(queryString, conn);
+            command.Parameters.AddWithValue("@id", id);
+            conn.Open();
+            SqlDataReader rdr = command.ExecuteReader();
+            while (rdr.Read())
+            {
+                var product = new Product()
+                {
+                    Id = rdr.GetInt32("id"),
+                    Title = rdr.GetString("title"),
+                    IsActive = rdr.GetBoolean("isActive")
+                };
+
+                conn.Close();
+
+                return product;
+            }
+
+            return null;
+        }
+    }
 }
