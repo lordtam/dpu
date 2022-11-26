@@ -24,3 +24,28 @@ dotnet ef dbcontext Scaffold "Server=db.ciofuwpvxhep.ap-southeast-1.rds.amazonaw
 
 <br/>
 https://support.google.com/chrome/answer/95417?hl=en&co=GENIE.Platform%3DDesktop#zippy=%2Cwindows
+
+<br/>
+==========================
+<br/>
+USE [surasak];  
+GO
+
+CREATE OR ALTER PROCEDURE [dbo].[GetProductById]  
+	@id int
+AS    
+   SET NOCOUNT ON;
+
+   SELECT *  
+   FROM Product AS sp  
+   WHERE Id = @id;
+   
+   RETURN;
+GO 
+
+USE [surasak]
+GO
+
+DECLARE	@return_value int
+EXEC [dbo].[GetProductById] @id = 1
+GO
