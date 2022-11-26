@@ -28,24 +28,24 @@ https://support.google.com/chrome/answer/95417?hl=en&co=GENIE.Platform%3DDesktop
 <br/>
 ==========================
 <br/>
-USE [surasak];  
-GO
+USE [surasak];<br/>
+GO<br/>
+<br/>
+CREATE OR ALTER PROCEDURE [dbo].[GetProductById]<br/>
+	@id int<br/>
+AS<br/>
+   SET NOCOUNT ON;<br/>
+<br/>
+   SELECT *  <br/>
+   FROM Product AS sp  <br/>
+   WHERE Id = @id;<br/>
+   <br/>
+   RETURN;<br/>
+GO <br/>
 
-CREATE OR ALTER PROCEDURE [dbo].[GetProductById]  
-	@id int
-AS    
-   SET NOCOUNT ON;
+USE [surasak]<br/>
+GO<br/>
 
-   SELECT *  
-   FROM Product AS sp  
-   WHERE Id = @id;
-   
-   RETURN;
-GO 
-
-USE [surasak]
-GO
-
-DECLARE	@return_value int
-EXEC [dbo].[GetProductById] @id = 1
+DECLARE	@return_value int<br/>
+EXEC [dbo].[GetProductById] @id = 1<br/>
 GO
