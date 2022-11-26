@@ -24,3 +24,11 @@ dotnet ef dbcontext Scaffold "Server=db.ciofuwpvxhep.ap-southeast-1.rds.amazonaw
 
 <br/>
 https://support.google.com/chrome/answer/95417?hl=en&co=GENIE.Platform%3DDesktop#zippy=%2Cwindows
+
+<br/>
+<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.8">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+</PackageReference><br/>
+<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.8" /><br/>
+<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.8" /><br/>
