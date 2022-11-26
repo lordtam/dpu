@@ -21,3 +21,6 @@ dotnet tool install --global dotnet-ef <br/>
 
 Scaffold command<br/>
 dotnet ef dbcontext Scaffold "Server=db.ciofuwpvxhep.ap-southeast-1.rds.amazonaws.com,1433;Initial Catalog=surasak;User ID=sa;Password=Aa123456;" Microsoft.EntityFrameworkCore.SqlServer --schema "dbo" --data-annotations -c DbContext
+
+<br/>
+https://support.google.com/chrome/answer/95417?hl=en&co=GENIE.Platform%3DDesktop#zippy=%2Cwindows
