@@ -49,3 +49,10 @@ GO<br/>
 DECLARE	@return_value int<br/>
 EXEC [dbo].[GetProductById] @id = 1<br/>
 GO
+
+
+<br/>
+
+=====
+
+dotnet watch run --launch-profile=development
